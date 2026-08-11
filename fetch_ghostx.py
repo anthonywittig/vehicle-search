@@ -22,6 +22,7 @@ from pathlib import Path
 
 DATA = Path(__file__).parent / "data" / "listings.json"
 BASE = "https://www.ghostxauto.com/api/trpc/listings.list"
+FEES = "https://www.ghostxauto.com/api/trpc/dealers.getFeesAndTaxes"
 
 # Make IDs observed on GhostX. Add more as the search widens.
 MAKE_IDS = {"Tesla": 48}
@@ -35,6 +36,23 @@ def fetch(make_id=None):
     )
     with urllib.request.urlopen(req, timeout=30) as resp:
         return json.load(resp)["result"]["data"]["json"]
+
+
+def fetch_dealer_fees(dealer_id):
+    query = urllib.parse.quote(json.dumps({"json": {"dealerId": dealer_id}}))
+    req = urllib.request.Request(
+        f"{FEES}?input={query}", headers={"User-Agent": "vehicle-search/1.0"}
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        rows = json.load(resp)["result"]["data"]["json"]
+    out = {"fees": {}, "listed_tax_rate": None}
+    keymap = {"doc": "doc", "title": "title", "registration": "registration", "other": "processing"}
+    for f in rows:
+        if f["type"] == "tax":
+            out["listed_tax_rate"] = f["value"]
+        elif f["type"] in keymap:
+            out["fees"][keymap[f["type"]]] = f["value"] / 100
+    return out
 
 
 def norm(s):
@@ -55,6 +73,7 @@ def entry(v):
         "source": "GhostX Automotive",
         "source_url": "https://www.ghostxauto.com/inventory",
         "listing_id": v["id"],
+        "dealer_id": v["dealerId"],
         "vin": v["vin"],
         "year": v["year"],
         "make": norm(v["make"]),
@@ -97,8 +116,8 @@ def main():
     kept = [v for v in data["vehicles"] if v["source"] != "GhostX Automotive"]
     fresh = [entry(v) for v in raw]
 
-    # Carry notes and life_miles overrides forward for listings that
-    # survive the refresh.
+    # Carry notes, life overrides, and quoted fees forward for listings
+    # that survive the refresh.
     old = {
         v["listing_id"]: v
         for v in data["vehicles"]
@@ -107,10 +126,19 @@ def main():
     for v in fresh:
         prev = old.get(v["listing_id"])
         if prev:
-            if prev.get("notes"):
-                v["notes"] = prev["notes"]
-            if prev.get("life_miles"):
-                v["life_miles"] = prev["life_miles"]
+            for key in ("notes", "life_miles", "fees_quoted"):
+                if prev.get(key):
+                    v[key] = prev[key]
+
+    # Refresh fee schedules for every dealer in the fresh listings,
+    # keeping any location info already recorded.
+    dealers = data.setdefault("dealers", {})
+    for dealer_id in sorted({v["dealer_id"] for v in fresh}):
+        dealer = dealers.setdefault(str(dealer_id), {})
+        try:
+            dealer.update(fetch_dealer_fees(dealer_id))
+        except Exception as e:
+            print(f"warning: fee fetch failed for dealer {dealer_id}: {e}")
 
     data["vehicles"] = fresh + kept
     data["captured_at"] = datetime.date.today().isoformat()

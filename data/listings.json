@@ -6,6 +6,7 @@
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
       "listing_id": 1042225,
+      "dealer_id": 1,
       "vin": "5YJXCDE25LF236852",
       "year": 2020,
       "make": "Tesla",
@@ -21,6 +22,7 @@
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
       "listing_id": 1046383,
+      "dealer_id": 83,
       "vin": "5YJ3E1EB6PF390161",
       "year": 2023,
       "make": "Tesla",
@@ -36,6 +38,7 @@
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
       "listing_id": 1046238,
+      "dealer_id": 83,
       "vin": "5YJ3E1EA1JF026812",
       "year": 2018,
       "make": "Tesla",
@@ -51,6 +54,7 @@
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
       "listing_id": 1046237,
+      "dealer_id": 83,
       "vin": "7SAYGDEF6NF469561",
       "year": 2022,
       "make": "Tesla",
@@ -66,6 +70,7 @@
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
       "listing_id": 1046167,
+      "dealer_id": 83,
       "vin": "5YJ3E1EA7RF783984",
       "year": 2024,
       "make": "Tesla",
@@ -81,6 +86,7 @@
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
       "listing_id": 1045956,
+      "dealer_id": 83,
       "vin": "5YJ3E1EB2LF735440",
       "year": 2020,
       "make": "Tesla",
@@ -96,6 +102,7 @@
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
       "listing_id": 1045535,
+      "dealer_id": 83,
       "vin": "5YJYGDEE5MF096421",
       "year": 2021,
       "make": "Tesla",
@@ -111,6 +118,7 @@
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
       "listing_id": 1045508,
+      "dealer_id": 83,
       "vin": "7SAYGDEF5PF701134",
       "year": 2023,
       "make": "Tesla",
@@ -126,6 +134,7 @@
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
       "listing_id": 1045448,
+      "dealer_id": 83,
       "vin": "5YJ3E1EB9LF667525",
       "year": 2020,
       "make": "Tesla",
@@ -141,6 +150,7 @@
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
       "listing_id": 1045280,
+      "dealer_id": 83,
       "vin": "5YJ3E1EC4PF696915",
       "year": 2023,
       "make": "Tesla",
@@ -156,6 +166,7 @@
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
       "listing_id": 1044730,
+      "dealer_id": 83,
       "vin": "5YJ3E1EB7NF212269",
       "year": 2022,
       "make": "Tesla",
@@ -171,6 +182,7 @@
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
       "listing_id": 1043920,
+      "dealer_id": 83,
       "vin": "5YJYGDEE7LF056176",
       "year": 2020,
       "make": "Tesla",
@@ -186,6 +198,7 @@
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
       "listing_id": 1042903,
+      "dealer_id": 83,
       "vin": "5YJ3E1EB7KF388900",
       "year": 2019,
       "make": "Tesla",
@@ -201,6 +214,7 @@
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
       "listing_id": 1017546,
+      "dealer_id": 51,
       "vin": "5YJSA1E44KF341414",
       "year": 2019,
       "make": "Tesla",
@@ -216,6 +230,7 @@
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
       "listing_id": 1037687,
+      "dealer_id": 12,
       "vin": "7SAYGDEE9NF356159",
       "year": 2022,
       "make": "Tesla",
@@ -231,6 +246,7 @@
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
       "listing_id": 1030974,
+      "dealer_id": 112,
       "vin": "5YJXCBE47GF014082",
       "year": 2016,
       "make": "Tesla",
@@ -246,6 +262,7 @@
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
       "listing_id": 1011024,
+      "dealer_id": 30,
       "vin": "5YJ3E1EB2KF388268",
       "year": 2019,
       "make": "Tesla",
@@ -261,6 +278,7 @@
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
       "listing_id": 1045954,
+      "dealer_id": 83,
       "vin": "KNDCC3LG9N5160550",
       "year": 2022,
       "make": "Kia",
@@ -269,10 +287,14 @@
       "price": 15850,
       "mileage": 59715,
       "status": "AVAILABLE",
-      "notes": "VIN KNDCC3LG = Niro EV. 10yr/100k battery warranty, ~40k warranty miles left. Life assumption revised down to 200k/150k (less high-mileage fleet data than Tesla).",
+      "notes": "VIN KNDCC3LG = Niro EV. 10yr/100k battery warranty, ~40k warranty miles left. Life assumption revised down to 200k/150k (less high-mileage fleet data than Tesla). OTD $17,793.42 per actual checkout quote 2026-08-11.",
       "life_miles": {
         "optimistic": 200000,
         "conservative": 150000
+      },
+      "fees_quoted": {
+        "doc": 497.0,
+        "tax_title_registration": 1446.42
       }
     },
     {
@@ -292,6 +314,10 @@
       "life_miles": {
         "optimistic": 200000,
         "conservative": 150000
+      },
+      "fees_estimate": {
+        "doc": 497.0,
+        "label": "typical dealer doc fee"
       }
     },
     {
@@ -307,7 +333,11 @@
       "price": 39990,
       "mileage": 0,
       "status": "BENCHMARK",
-      "notes": "MSRP before ~$1,400 destination/order fees"
+      "notes": "MSRP before ~$1,400 destination/order fees",
+      "fees_estimate": {
+        "doc": 1400.0,
+        "label": "destination + order fee"
+      }
     },
     {
       "condition": "new",
@@ -322,7 +352,11 @@
       "price": 44990,
       "mileage": 0,
       "status": "BENCHMARK",
-      "notes": "MSRP before ~$1,400 destination/order fees"
+      "notes": "MSRP before ~$1,400 destination/order fees",
+      "fees_estimate": {
+        "doc": 1400.0,
+        "label": "destination + order fee"
+      }
     },
     {
       "condition": "new",
@@ -337,7 +371,88 @@
       "price": 48990,
       "mileage": 0,
       "status": "BENCHMARK",
-      "notes": "MSRP before ~$1,400 destination/order fees"
+      "notes": "MSRP before ~$1,400 destination/order fees",
+      "fees_estimate": {
+        "doc": 1400.0,
+        "label": "destination + order fee"
+      }
     }
-  ]
+  ],
+  "config": {
+    "buyer_state": "UT",
+    "buyer_tax_rate": 0.0745,
+    "note": "Tax and registration follow the buyer, not the dealer. 7.45% on (price + doc fee) plus the dealer-listed title/registration fees reproduced the actual Niro checkout quote within $5."
+  },
+  "dealers": {
+    "1": {
+      "name": "Keysy",
+      "city": "Pleasant Grove",
+      "state": "UT",
+      "fees": {
+        "processing": 189.0,
+        "doc": 444.0,
+        "title": 70.5,
+        "registration": 88.0
+      },
+      "listed_tax_rate": 0.0745
+    },
+    "12": {
+      "name": "Action Auto",
+      "city": "Lehi",
+      "state": "UT",
+      "fees": {
+        "doc": 444.0,
+        "title": 50.0,
+        "registration": 40.0
+      },
+      "listed_tax_rate": 0.0745
+    },
+    "30": {
+      "name": "Zoom Auto Sales",
+      "city": "Midvale",
+      "state": "UT",
+      "fees": {
+        "processing": 189.0,
+        "doc": 444.0,
+        "title": 70.5,
+        "registration": 88.0
+      },
+      "listed_tax_rate": 0.0745
+    },
+    "51": {
+      "name": "Hedberg Solomon Auto Sales",
+      "city": "West Bountiful",
+      "state": "UT",
+      "fees": {
+        "processing": 189.0,
+        "doc": 444.0,
+        "title": 70.5,
+        "registration": 88.0
+      },
+      "listed_tax_rate": 0.0745
+    },
+    "83": {
+      "name": "GhostX Auto",
+      "city": "St. George",
+      "state": "UT",
+      "fees": {
+        "doc": 497.0,
+        "title": 145.0,
+        "registration": 88.0
+      },
+      "listed_tax_rate": 0.0675
+    },
+    "112": {
+      "name": "Anytime Auto Group",
+      "city": "Sherman Oaks",
+      "state": "CA",
+      "fees": {
+        "processing": 189.0,
+        "doc": 444.0,
+        "title": 70.5,
+        "registration": 88.0
+      },
+      "listed_tax_rate": 0.0745
+    }
+  }
 }
