@@ -151,12 +151,10 @@ assumed service life − odometer. Default life is
 conservative; per-vehicle `life_miles` overrides apply (the "Life"
 column shows the assumption used).
 
-Life assumptions vary by vehicle class (each an explicit `life_miles`
-override in the data): Teslas keep the 300k/250k default (deepest
-high-mileage fleet data of any EV); the Kia Niro EV gets 200k/150k (good
-pack reputation, thin fleet data); the Ford Mach-E 250k/200k; full-size
-trucks 250k/200k; European ICE vehicles 200k/150k (maintenance costs
-typically make 200k the practical ceiling). See each vehicle's `notes`.
+Life assumptions: Teslas use the 300k/250k default (deepest high-mileage
+fleet data of any EV); the Kia Niro EV gets 200k/150k via a `life_miles`
+override (good pack reputation, thin fleet data). See each vehicle's
+`notes`.
 
 This compares purchase prices across mileages; it is not a
 total-cost-of-ownership model (no financing, insurance, energy, or

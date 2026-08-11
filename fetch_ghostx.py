@@ -4,7 +4,8 @@
 GhostX (ghostxauto.com, powered by Keysy) renders client-side and talks to
 a tRPC API at /api/trpc. This script queries `listings.list` for the
 dealers in DEALER_IDS (currently just dealer 83, St. George UT — the one
-whose inventory we're tracking), replaces the GhostX-sourced entries in
+whose inventory we're tracking), keeps only the makes in MAKES
+(Tesla and Kia), replaces the GhostX-sourced entries in
 data/listings.json with the fresh results, refreshes those dealers' fee
 schedules, and leaves entries from other sources (e.g. new-car MSRP
 benchmarks) untouched. Notes, life_miles overrides, and fees_quoted are
@@ -29,6 +30,9 @@ FEES = "https://www.ghostxauto.com/api/trpc/dealers.getFeesAndTaxes"
 
 # The dealers whose inventory we track. 83 = St. George, UT.
 DEALER_IDS = [83]
+
+# Makes we care about; other makes at the dealer are ignored.
+MAKES = {"Tesla", "Kia"}
 
 
 def fetch_listings(dealer_ids):
@@ -101,7 +105,7 @@ def main():
     args = parser.parse_args()
     dealer_ids = args.dealer_id or DEALER_IDS
 
-    raw = fetch_listings(dealer_ids)
+    raw = [v for v in fetch_listings(dealer_ids) if norm(v["make"]) in MAKES]
 
     data = json.loads(DATA.read_text())
     kept = [v for v in data["vehicles"] if v["source"] != "GhostX Automotive"]
