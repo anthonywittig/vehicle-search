@@ -6,11 +6,12 @@ Usage:
     python3 analyze.py --write    # also regenerate ANALYSIS.md
 
 The model is deliberately simple: assume a total service life for the
-vehicle (default 300k miles, with a conservative 250k alternative),
-subtract the odometer to get expected remaining miles, and divide the
-asking price by that. It ignores financing, insurance, energy, and
-maintenance — it is a way to compare purchase prices across mileages,
-not a total-cost-of-ownership model.
+vehicle (default 300k miles optimistic / 250k conservative; a vehicle can
+override these with a "life_miles" object in listings.json), subtract the
+odometer to get expected remaining miles, and divide the asking price by
+that. It ignores financing, insurance, energy, and maintenance — it is a
+way to compare purchase prices across mileages, not a
+total-cost-of-ownership model.
 """
 import argparse
 import json
@@ -19,7 +20,7 @@ from pathlib import Path
 DATA = Path(__file__).parent / "data" / "listings.json"
 ANALYSIS = Path(__file__).parent / "ANALYSIS.md"
 
-LIFESPANS = [300_000, 250_000]
+DEFAULT_LIFE = {"optimistic": 300_000, "conservative": 250_000}
 
 
 def load():
@@ -27,40 +28,46 @@ def load():
         return json.load(f)
 
 
-def rows(vehicles, primary_life, secondary_life):
+def rows(vehicles):
     out = []
     for v in vehicles:
-        remaining = primary_life - v["mileage"]
+        life = {**DEFAULT_LIFE, **v.get("life_miles", {})}
+        remaining = life["optimistic"] - v["mileage"]
         if remaining <= 0:
             continue
+        conservative_remaining = life["conservative"] - v["mileage"]
         out.append(
             {
                 "vehicle": f"{v['year']} {v['make']} {v['model']} {v['trim']}".strip(),
                 "condition": v["condition"],
                 "price": v["price"],
                 "mileage": v["mileage"],
+                "life": life,
                 "remaining": remaining,
-                "primary": v["price"] / remaining,
-                "secondary": v["price"] / (secondary_life - v["mileage"])
-                if secondary_life > v["mileage"]
+                "optimistic": v["price"] / remaining,
+                "conservative": v["price"] / conservative_remaining
+                if conservative_remaining > 0
                 else None,
             }
         )
-    out.sort(key=lambda r: r["primary"])
+    out.sort(key=lambda r: r["optimistic"])
     return out
 
 
-def table(rows, primary_life, secondary_life):
+def table(rows):
     lines = [
-        f"| Vehicle | Condition | Price | Odometer | Remaining (of {primary_life // 1000}k) "
-        f"| $/mi @{primary_life // 1000}k | $/mi @{secondary_life // 1000}k |",
-        "|---|---|---|---|---|---|---|",
+        "| Vehicle | Condition | Price | Odometer | Life (opt/cons) "
+        "| Remaining | $/mi optimistic | $/mi conservative |",
+        "|---|---|---|---|---|---|---|---|",
     ]
     for r in rows:
-        secondary = f"${r['secondary']:.3f}" if r["secondary"] is not None else "—"
+        conservative = (
+            f"${r['conservative']:.3f}" if r["conservative"] is not None else "—"
+        )
+        life = f"{r['life']['optimistic'] // 1000}k/{r['life']['conservative'] // 1000}k"
         lines.append(
             f"| {r['vehicle']} | {r['condition']} | ${r['price']:,} | {r['mileage']:,} "
-            f"| {r['remaining']:,} | ${r['primary']:.3f} | {secondary} |"
+            f"| {life} | {r['remaining']:,} | ${r['optimistic']:.3f} | {conservative} |"
         )
     return "\n".join(lines)
 
@@ -68,18 +75,11 @@ def table(rows, primary_life, secondary_life):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--write", action="store_true", help="regenerate ANALYSIS.md")
-    parser.add_argument(
-        "--life",
-        type=int,
-        default=LIFESPANS[0],
-        help="primary expected total service life in miles (default 300000)",
-    )
     args = parser.parse_args()
 
     data = load()
-    primary, secondary = args.life, LIFESPANS[1]
-    result = rows(data["vehicles"], primary, secondary)
-    md_table = table(result, primary, secondary)
+    result = rows(data["vehicles"])
+    md_table = table(result)
 
     print(f"Data captured: {data['captured_at']}  ({len(result)} vehicles)\n")
     print(md_table)
@@ -88,16 +88,24 @@ def main():
         best = result[0]
         content = f"""# Cost per expected remaining mile
 
-Data captured **{data['captured_at']}** · {len(result)} vehicles · sorted best value first.
+Data captured **{data['captured_at']}** · {len(result)} vehicles · sorted best value first
+(by the optimistic figure).
 Regenerate with `python3 analyze.py --write` after updating `data/listings.json`.
 
 ## Method
 
-Assume a total service life of {primary:,} miles (with a conservative
-{secondary:,}-mile alternative), subtract the odometer to get expected
-remaining miles, and divide the asking price by that. This compares
-purchase prices across mileages; it is not a total-cost-of-ownership
-model (no financing, insurance, energy, or maintenance).
+Assume a total service life — {DEFAULT_LIFE['optimistic']:,} miles optimistic,
+{DEFAULT_LIFE['conservative']:,} conservative by default — subtract the odometer
+to get expected remaining miles, and divide the asking price by that. A
+vehicle can override the default life with a `life_miles` object in
+`data/listings.json`; the "Life" column shows the assumption used. This
+compares purchase prices across mileages; it is not a
+total-cost-of-ownership model (no financing, insurance, energy, or
+maintenance).
+
+Current overrides: **Kia Niro EV at 200k/150k** — the Niro's LG pack has a
+good reputation but far less high-mileage fleet data than Tesla
+drivetrains, so it gets a materially shorter assumed life.
 
 ## Results
 
@@ -117,7 +125,8 @@ model (no financing, insurance, energy, or maintenance).
   2025-09-30, so no subsidy offsets new-car prices.
 
 Current best value: **{best['vehicle']}** at ${best['price']:,} /
-{best['mileage']:,} mi → ${best['primary']:.3f} per expected remaining mile.
+{best['mileage']:,} mi → ${best['optimistic']:.3f} per expected remaining mile
+(${best['conservative']:.3f} conservative).
 """
         ANALYSIS.write_text(content)
         print(f"\nWrote {ANALYSIS}")

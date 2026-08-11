@@ -97,14 +97,20 @@ def main():
     kept = [v for v in data["vehicles"] if v["source"] != "GhostX Automotive"]
     fresh = [entry(v) for v in raw]
 
-    # Carry notes forward for listings that survive the refresh.
-    old_notes = {
-        v["listing_id"]: v["notes"]
+    # Carry notes and life_miles overrides forward for listings that
+    # survive the refresh.
+    old = {
+        v["listing_id"]: v
         for v in data["vehicles"]
-        if v["source"] == "GhostX Automotive" and v.get("notes")
+        if v["source"] == "GhostX Automotive"
     }
     for v in fresh:
-        v["notes"] = old_notes.get(v["listing_id"], v["notes"])
+        prev = old.get(v["listing_id"])
+        if prev:
+            if prev.get("notes"):
+                v["notes"] = prev["notes"]
+            if prev.get("life_miles"):
+                v["life_miles"] = prev["life_miles"]
 
     data["vehicles"] = fresh + kept
     data["captured_at"] = datetime.date.today().isoformat()

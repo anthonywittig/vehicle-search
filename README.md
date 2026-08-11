@@ -32,24 +32,31 @@ dealers or private sellers, append entries to `data/listings.json` by hand
 
 ## Method (short version)
 
-Assume a total service life — 300k miles primary, 250k conservative —
-subtract the odometer, and divide asking price by the remaining miles.
-It's a purchase-price comparison, not total cost of ownership; see
-[`ANALYSIS.md`](ANALYSIS.md) for the caveats (battery warranty position is
-the big one the number doesn't capture).
+Assume a total service life — 300k miles optimistic, 250k conservative by
+default; a vehicle can override this with a `life_miles` object in
+`data/listings.json` — subtract the odometer, and divide asking price by
+the remaining miles. It's a purchase-price comparison, not total cost of
+ownership; see [`ANALYSIS.md`](ANALYSIS.md) for the caveats (battery
+warranty position is the big one the number doesn't capture).
+
+Current overrides: the Kia Niro EV is assumed to last 200k/150k miles —
+its LG pack has a good reputation but far less high-mileage fleet data
+than Tesla drivetrains.
 
 ## Findings so far (2026-08-11)
 
-- The **2022 Kia Niro EV at $15,850 / 59,715 mi (~6.6¢/mi)** is the
-  standout — roughly half the cost per mile of any new car and ~22%
-  cheaper than the best used Tesla on the lot.
-- Used high-mileage Model 3 Long Ranges ($17–23k) cluster at 8.5–11¢/mi
-  but are at or past Tesla's 120k battery warranty cap.
+- With the Niro's life assumption revised down to 200k/150k, the **used
+  high-mileage Model 3 Long Ranges ($17–23k, 8.5–11¢/mi)** lead on value,
+  though they're at or past Tesla's 120k battery warranty cap.
+- The **2022 Kia Niro EV at $15,850 / 59,715 mi** lands mid-pack at
+  ~11.3¢/mi optimistic — level with used Model Y Long Ranges — but its
+  conservative figure (17.6¢/mi at a 150k life) is among the worst on the
+  lot. Cheap sticker, but the value case now hinges on the pack lasting.
 - Used 2020–2022 Model Y Long Ranges (~$25–28k, 11–12¢/mi) modestly beat
   a new Model Y Standard ($39,990, ~13.3¢/mi); the new car's full
   warranty and zero degradation nearly close that gap.
-- A new 2026 Niro EV ($41,195, ~13.7¢/mi) is hard to justify against its
-  own used twin, though the 2026 adds a NACS port with Supercharger
-  access.
+- A new 2026 Niro EV ($41,195, ~20.6¢/mi under the shorter life) is the
+  most expensive per-mile option tracked, though the 2026 adds a NACS
+  port with Supercharger access.
 - The federal $7,500 EV tax credit ended 2025-09-30 — no subsidy tilts
   the math toward new.

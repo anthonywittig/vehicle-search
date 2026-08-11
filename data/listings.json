@@ -269,7 +269,11 @@
       "price": 15850,
       "mileage": 59715,
       "status": "AVAILABLE",
-      "notes": "VIN KNDCC3LG = Niro EV. 10yr/100k battery warranty, ~40k warranty miles left."
+      "notes": "VIN KNDCC3LG = Niro EV. 10yr/100k battery warranty, ~40k warranty miles left. Life assumption revised down to 200k/150k (less high-mileage fleet data than Tesla).",
+      "life_miles": {
+        "optimistic": 200000,
+        "conservative": 150000
+      }
     },
     {
       "condition": "new",
@@ -284,7 +288,11 @@
       "price": 41195,
       "mileage": 0,
       "status": "BENCHMARK",
-      "notes": "MSRP incl. destination"
+      "notes": "MSRP incl. destination Life assumption revised down to 200k/150k (less high-mileage fleet data than Tesla).",
+      "life_miles": {
+        "optimistic": 200000,
+        "conservative": 150000
+      }
     },
     {
       "condition": "new",
