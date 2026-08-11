@@ -2,14 +2,17 @@
 """Refresh GhostX Automotive listings in data/listings.json.
 
 GhostX (ghostxauto.com, powered by Keysy) renders client-side and talks to
-a tRPC API at /api/trpc. This script queries `listings.list`, replaces the
-GhostX-sourced entries in data/listings.json with the fresh results, and
-leaves entries from other sources (e.g. new-car MSRP benchmarks) untouched.
+a tRPC API at /api/trpc. This script queries `listings.list` for the
+dealers in DEALER_IDS (currently just dealer 83, St. George UT — the one
+whose inventory we're tracking), replaces the GhostX-sourced entries in
+data/listings.json with the fresh results, refreshes those dealers' fee
+schedules, and leaves entries from other sources (e.g. new-car MSRP
+benchmarks) untouched. Notes, life_miles overrides, and fees_quoted are
+carried forward for listings that survive the refresh.
 
 Usage:
-    python3 fetch_ghostx.py                 # refresh Tesla (make 48) + Kia (make 25?) — see MAKE_IDS
-    python3 fetch_ghostx.py --make-id 48    # refresh a single make
-    python3 fetch_ghostx.py --all           # fetch with no make filter (server may page results)
+    python3 fetch_ghostx.py                  # refresh DEALER_IDS inventory
+    python3 fetch_ghostx.py --dealer-id 83   # refresh a specific dealer
 
 Only standard library is used.
 """
@@ -24,13 +27,14 @@ DATA = Path(__file__).parent / "data" / "listings.json"
 BASE = "https://www.ghostxauto.com/api/trpc/listings.list"
 FEES = "https://www.ghostxauto.com/api/trpc/dealers.getFeesAndTaxes"
 
-# Make IDs observed on GhostX. Add more as the search widens.
-MAKE_IDS = {"Tesla": 48}
+# The dealers whose inventory we track. 83 = St. George, UT.
+DEALER_IDS = [83]
 
 
-def fetch(make_id=None):
-    filters = {"makeIds": [make_id]} if make_id is not None else {}
-    query = urllib.parse.quote(json.dumps({"json": {"filters": filters}}))
+def fetch_listings(dealer_ids):
+    query = urllib.parse.quote(
+        json.dumps({"json": {"filters": {"dealerIds": dealer_ids}}})
+    )
     req = urllib.request.Request(
         f"{BASE}?input={query}", headers={"User-Agent": "vehicle-search/1.0"}
     )
@@ -88,29 +92,16 @@ def entry(v):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--make-id", type=int, help="refresh a single GhostX make id")
     parser.add_argument(
-        "--all", action="store_true", help="fetch with no make filter"
+        "--dealer-id",
+        type=int,
+        action="append",
+        help="dealer id(s) to refresh (default: DEALER_IDS in this file)",
     )
     args = parser.parse_args()
+    dealer_ids = args.dealer_id or DEALER_IDS
 
-    if args.all:
-        raw = fetch()
-    elif args.make_id is not None:
-        raw = fetch(args.make_id)
-    else:
-        raw, seen = [], set()
-        for make_id in MAKE_IDS.values():
-            for v in fetch(make_id):
-                if v["id"] not in seen:
-                    seen.add(v["id"])
-                    raw.append(v)
-        # The Niro isn't reachable via the Tesla make filter; grab it from
-        # the unfiltered list too.
-        for v in fetch():
-            if v["id"] not in seen and "niro" in (v.get("searchField") or ""):
-                seen.add(v["id"])
-                raw.append(v)
+    raw = fetch_listings(dealer_ids)
 
     data = json.loads(DATA.read_text())
     kept = [v for v in data["vehicles"] if v["source"] != "GhostX Automotive"]
@@ -130,8 +121,7 @@ def main():
                 if prev.get(key):
                     v[key] = prev[key]
 
-    # Refresh fee schedules for every dealer in the fresh listings,
-    # keeping any location info already recorded.
+    # Refresh fee schedules for the dealers we track.
     dealers = data.setdefault("dealers", {})
     for dealer_id in sorted({v["dealer_id"] for v in fresh}):
         dealer = dealers.setdefault(str(dealer_id), {})
@@ -143,11 +133,15 @@ def main():
     data["vehicles"] = fresh + kept
     data["captured_at"] = datetime.date.today().isoformat()
     DATA.write_text(json.dumps(data, indent=2) + "\n")
+    gone = sorted(set(old) - {v["listing_id"] for v in fresh})
     print(
-        f"Refreshed {len(fresh)} GhostX listings "
-        f"(+{len(kept)} entries from other sources kept). "
-        f"Now run: python3 analyze.py --write"
+        f"Refreshed {len(fresh)} GhostX listings from dealer(s) "
+        f"{', '.join(map(str, dealer_ids))} "
+        f"(+{len(kept)} entries from other sources kept)."
     )
+    if gone:
+        print(f"Dropped {len(gone)} listing(s) no longer in inventory: {gone}")
+    print("Now run: python3 analyze.py --write")
 
 
 if __name__ == "__main__":

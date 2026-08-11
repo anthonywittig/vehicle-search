@@ -5,17 +5,101 @@
       "condition": "used",
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
-      "listing_id": 1042225,
-      "dealer_id": 1,
-      "vin": "5YJXCDE25LF236852",
-      "year": 2020,
-      "make": "Tesla",
-      "model": "Model X",
-      "trim": "Long Range",
-      "price": 29568,
-      "mileage": 95967,
+      "listing_id": 1037539,
+      "dealer_id": 83,
+      "vin": "4JGFB4JE5NA823333",
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "Gle 350",
+      "trim": "",
+      "price": 29999,
+      "mileage": 48314,
       "status": "AVAILABLE",
-      "notes": ""
+      "notes": "European ICE: maintenance costs typically make 200k the practical ceiling.",
+      "life_miles": {
+        "optimistic": 200000,
+        "conservative": 150000
+      }
+    },
+    {
+      "condition": "used",
+      "source": "GhostX Automotive",
+      "source_url": "https://www.ghostxauto.com/inventory",
+      "listing_id": 1023044,
+      "dealer_id": 83,
+      "vin": "SALGS2RU8LA581541",
+      "year": 2020,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "trim": "Hse",
+      "price": 28690,
+      "mileage": 74248,
+      "status": "AVAILABLE",
+      "notes": "European ICE: maintenance costs typically make 200k the practical ceiling.",
+      "life_miles": {
+        "optimistic": 200000,
+        "conservative": 150000
+      }
+    },
+    {
+      "condition": "used",
+      "source": "GhostX Automotive",
+      "source_url": "https://www.ghostxauto.com/inventory",
+      "listing_id": 1031399,
+      "dealer_id": 83,
+      "vin": "YV4A22PK3G1078209",
+      "year": 2016,
+      "make": "Volvo",
+      "model": "XC90",
+      "trim": "T6 Momentum",
+      "price": 17650,
+      "mileage": 71188,
+      "status": "AVAILABLE",
+      "notes": "European ICE: maintenance costs typically make 200k the practical ceiling.",
+      "life_miles": {
+        "optimistic": 200000,
+        "conservative": 150000
+      }
+    },
+    {
+      "condition": "used",
+      "source": "GhostX Automotive",
+      "source_url": "https://www.ghostxauto.com/inventory",
+      "listing_id": 1022432,
+      "dealer_id": 83,
+      "vin": "SALWR2RK0LA882584",
+      "year": 2020,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "trim": "Sport",
+      "price": 25299,
+      "mileage": 86317,
+      "status": "AVAILABLE",
+      "notes": "European ICE: maintenance costs typically make 200k the practical ceiling.",
+      "life_miles": {
+        "optimistic": 200000,
+        "conservative": 150000
+      }
+    },
+    {
+      "condition": "used",
+      "source": "GhostX Automotive",
+      "source_url": "https://www.ghostxauto.com/inventory",
+      "listing_id": 1022608,
+      "dealer_id": 83,
+      "vin": "SALZP2FX0LH005426",
+      "year": 2020,
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "trim": "Se",
+      "price": 19200,
+      "mileage": 58709,
+      "status": "AVAILABLE",
+      "notes": "European ICE: maintenance costs typically make 200k the practical ceiling.",
+      "life_miles": {
+        "optimistic": 200000,
+        "conservative": 150000
+      }
     },
     {
       "condition": "used",
@@ -32,6 +116,46 @@
       "mileage": 36308,
       "status": "AVAILABLE",
       "notes": ""
+    },
+    {
+      "condition": "used",
+      "source": "GhostX Automotive",
+      "source_url": "https://www.ghostxauto.com/inventory",
+      "listing_id": 1046338,
+      "dealer_id": 83,
+      "vin": "3FMTK3RM1PMA46261",
+      "year": 2023,
+      "make": "Ford",
+      "model": "Mustang Mach-E",
+      "trim": "Premium",
+      "price": 29750,
+      "mileage": 16662,
+      "status": "AVAILABLE",
+      "notes": "Ford EV pack has less high-mileage fleet data than Tesla; split the difference.",
+      "life_miles": {
+        "optimistic": 250000,
+        "conservative": 200000
+      }
+    },
+    {
+      "condition": "used",
+      "source": "GhostX Automotive",
+      "source_url": "https://www.ghostxauto.com/inventory",
+      "listing_id": 1046239,
+      "dealer_id": 83,
+      "vin": "3VWF07AT0GM618080",
+      "year": 2016,
+      "make": "Volkswagen",
+      "model": "Beetle",
+      "trim": "1.8T S, Wolfsburg Edition, Fleet Edition,Classic",
+      "price": 7500,
+      "mileage": 112561,
+      "status": "AVAILABLE",
+      "notes": "European ICE: maintenance costs typically make 200k the practical ceiling.",
+      "life_miles": {
+        "optimistic": 200000,
+        "conservative": 150000
+      }
     },
     {
       "condition": "used",
@@ -69,6 +193,26 @@
       "condition": "used",
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
+      "listing_id": 1046168,
+      "dealer_id": 83,
+      "vin": "WAUD2AFR3GA027220",
+      "year": 2016,
+      "make": "Audi",
+      "model": "A5",
+      "trim": "S Line Quattro Premium",
+      "price": 11750,
+      "mileage": 100166,
+      "status": "AVAILABLE",
+      "notes": "European ICE: maintenance costs typically make 200k the practical ceiling.",
+      "life_miles": {
+        "optimistic": 200000,
+        "conservative": 150000
+      }
+    },
+    {
+      "condition": "used",
+      "source": "GhostX Automotive",
+      "source_url": "https://www.ghostxauto.com/inventory",
       "listing_id": 1046167,
       "dealer_id": 83,
       "vin": "5YJ3E1EA7RF783984",
@@ -101,6 +245,70 @@
       "condition": "used",
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
+      "listing_id": 1045955,
+      "dealer_id": 83,
+      "vin": "1GTU9EET5LZ152993",
+      "year": 2020,
+      "make": "Gmc",
+      "model": "Sierra",
+      "trim": "AT4 Carbon Pro",
+      "price": 32950,
+      "mileage": 91652,
+      "status": "AVAILABLE",
+      "notes": "Full-size truck drivetrains routinely reach 250k.",
+      "life_miles": {
+        "optimistic": 250000,
+        "conservative": 200000
+      }
+    },
+    {
+      "condition": "used",
+      "source": "GhostX Automotive",
+      "source_url": "https://www.ghostxauto.com/inventory",
+      "listing_id": 1045954,
+      "dealer_id": 83,
+      "vin": "KNDCC3LG9N5160550",
+      "year": 2022,
+      "make": "Kia",
+      "model": "Niro EV",
+      "trim": "S, Ex",
+      "price": 15850,
+      "mileage": 59715,
+      "status": "AVAILABLE",
+      "notes": "VIN KNDCC3LG = Niro EV. 10yr/100k battery warranty, ~40k warranty miles left. Life assumption revised down to 200k/150k (less high-mileage fleet data than Tesla). OTD $17,793.42 per actual checkout quote 2026-08-11.",
+      "life_miles": {
+        "optimistic": 200000,
+        "conservative": 150000
+      },
+      "fees_quoted": {
+        "doc": 497.0,
+        "tax_title_registration": 1446.42
+      }
+    },
+    {
+      "condition": "used",
+      "source": "GhostX Automotive",
+      "source_url": "https://www.ghostxauto.com/inventory",
+      "listing_id": 1045879,
+      "dealer_id": 83,
+      "vin": "WA1LXBF79PD005574",
+      "year": 2023,
+      "make": "Audi",
+      "model": "Q7",
+      "trim": "Quattro Premium Plus",
+      "price": 41500,
+      "mileage": 11947,
+      "status": "AVAILABLE",
+      "notes": "European ICE: maintenance costs typically make 200k the practical ceiling.",
+      "life_miles": {
+        "optimistic": 200000,
+        "conservative": 150000
+      }
+    },
+    {
+      "condition": "used",
+      "source": "GhostX Automotive",
+      "source_url": "https://www.ghostxauto.com/inventory",
       "listing_id": 1045535,
       "dealer_id": 83,
       "vin": "5YJYGDEE5MF096421",
@@ -112,6 +320,26 @@
       "mileage": 65717,
       "status": "AVAILABLE",
       "notes": ""
+    },
+    {
+      "condition": "used",
+      "source": "GhostX Automotive",
+      "source_url": "https://www.ghostxauto.com/inventory",
+      "listing_id": 1045534,
+      "dealer_id": 83,
+      "vin": "3FMTK4SXXPMA55860",
+      "year": 2023,
+      "make": "Ford",
+      "model": "Mustang Mach-E",
+      "trim": "Gt Performance Edition",
+      "price": 31750,
+      "mileage": 49032,
+      "status": "AVAILABLE",
+      "notes": "Ford EV pack has less high-mileage fleet data than Tesla; split the difference.",
+      "life_miles": {
+        "optimistic": 250000,
+        "conservative": 200000
+      }
     },
     {
       "condition": "used",
@@ -197,104 +425,20 @@
       "condition": "used",
       "source": "GhostX Automotive",
       "source_url": "https://www.ghostxauto.com/inventory",
-      "listing_id": 1042903,
+      "listing_id": 1043437,
       "dealer_id": 83,
-      "vin": "5YJ3E1EB7KF388900",
-      "year": 2019,
-      "make": "Tesla",
-      "model": "Model 3",
-      "trim": "Long Range",
-      "price": 21250,
-      "mileage": 83776,
+      "vin": "3GCUYEETXLG375257",
+      "year": 2020,
+      "make": "Chevrolet",
+      "model": "Silverado",
+      "trim": "Rst",
+      "price": 28750,
+      "mileage": 89920,
       "status": "AVAILABLE",
-      "notes": ""
-    },
-    {
-      "condition": "used",
-      "source": "GhostX Automotive",
-      "source_url": "https://www.ghostxauto.com/inventory",
-      "listing_id": 1017546,
-      "dealer_id": 51,
-      "vin": "5YJSA1E44KF341414",
-      "year": 2019,
-      "make": "Tesla",
-      "model": "Model S",
-      "trim": "Performance",
-      "price": 36490,
-      "mileage": 22880,
-      "status": "AVAILABLE",
-      "notes": ""
-    },
-    {
-      "condition": "used",
-      "source": "GhostX Automotive",
-      "source_url": "https://www.ghostxauto.com/inventory",
-      "listing_id": 1037687,
-      "dealer_id": 12,
-      "vin": "7SAYGDEE9NF356159",
-      "year": 2022,
-      "make": "Tesla",
-      "model": "Model Y",
-      "trim": "Long Range",
-      "price": 25895,
-      "mileage": 76504,
-      "status": "AVAILABLE",
-      "notes": ""
-    },
-    {
-      "condition": "used",
-      "source": "GhostX Automotive",
-      "source_url": "https://www.ghostxauto.com/inventory",
-      "listing_id": 1030974,
-      "dealer_id": 112,
-      "vin": "5YJXCBE47GF014082",
-      "year": 2016,
-      "make": "Tesla",
-      "model": "Model X P90D",
-      "trim": "P90D",
-      "price": 22995,
-      "mileage": 102130,
-      "status": "AVAILABLE",
-      "notes": ""
-    },
-    {
-      "condition": "used",
-      "source": "GhostX Automotive",
-      "source_url": "https://www.ghostxauto.com/inventory",
-      "listing_id": 1011024,
-      "dealer_id": 30,
-      "vin": "5YJ3E1EB2KF388268",
-      "year": 2019,
-      "make": "Tesla",
-      "model": "Model 3",
-      "trim": "Long Range",
-      "price": 17490,
-      "mileage": 94003,
-      "status": "AVAILABLE",
-      "notes": ""
-    },
-    {
-      "condition": "used",
-      "source": "GhostX Automotive",
-      "source_url": "https://www.ghostxauto.com/inventory",
-      "listing_id": 1045954,
-      "dealer_id": 83,
-      "vin": "KNDCC3LG9N5160550",
-      "year": 2022,
-      "make": "Kia",
-      "model": "Niro EV",
-      "trim": "S, Ex",
-      "price": 15850,
-      "mileage": 59715,
-      "status": "AVAILABLE",
-      "notes": "VIN KNDCC3LG = Niro EV. 10yr/100k battery warranty, ~40k warranty miles left. Life assumption revised down to 200k/150k (less high-mileage fleet data than Tesla). OTD $17,793.42 per actual checkout quote 2026-08-11.",
+      "notes": "Full-size truck drivetrains routinely reach 250k.",
       "life_miles": {
-        "optimistic": 200000,
-        "conservative": 150000
-      },
-      "fees_quoted": {
-        "doc": 497.0,
-        "tax_title_registration": 1446.42
+        "optimistic": 250000,
+        "conservative": 200000
       }
     },
     {
@@ -381,56 +525,9 @@
   "config": {
     "buyer_state": "UT",
     "buyer_tax_rate": 0.0745,
-    "note": "Tax and registration follow the buyer, not the dealer. 7.45% on (price + doc fee) plus the dealer-listed title/registration fees reproduced the actual Niro checkout quote within $5."
+    "note": "Tax and registration follow the buyer, not the dealer. 7.45% on (price + doc fee) plus the dealer-listed title/registration fees reproduced the actual Niro checkout quote within $5. Scope: dealer 83 (St. George, UT) inventory only, plus new-car benchmarks."
   },
   "dealers": {
-    "1": {
-      "name": "Keysy",
-      "city": "Pleasant Grove",
-      "state": "UT",
-      "fees": {
-        "processing": 189.0,
-        "doc": 444.0,
-        "title": 70.5,
-        "registration": 88.0
-      },
-      "listed_tax_rate": 0.0745
-    },
-    "12": {
-      "name": "Action Auto",
-      "city": "Lehi",
-      "state": "UT",
-      "fees": {
-        "doc": 444.0,
-        "title": 50.0,
-        "registration": 40.0
-      },
-      "listed_tax_rate": 0.0745
-    },
-    "30": {
-      "name": "Zoom Auto Sales",
-      "city": "Midvale",
-      "state": "UT",
-      "fees": {
-        "processing": 189.0,
-        "doc": 444.0,
-        "title": 70.5,
-        "registration": 88.0
-      },
-      "listed_tax_rate": 0.0745
-    },
-    "51": {
-      "name": "Hedberg Solomon Auto Sales",
-      "city": "West Bountiful",
-      "state": "UT",
-      "fees": {
-        "processing": 189.0,
-        "doc": 444.0,
-        "title": 70.5,
-        "registration": 88.0
-      },
-      "listed_tax_rate": 0.0745
-    },
     "83": {
       "name": "GhostX Auto",
       "city": "St. George",
@@ -441,18 +538,6 @@
         "registration": 88.0
       },
       "listed_tax_rate": 0.0675
-    },
-    "112": {
-      "name": "Anytime Auto Group",
-      "city": "Sherman Oaks",
-      "state": "CA",
-      "fees": {
-        "processing": 189.0,
-        "doc": 444.0,
-        "title": 70.5,
-        "registration": 88.0
-      },
-      "listed_tax_rate": 0.0745
     }
   }
 }
