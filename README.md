@@ -93,3 +93,7 @@ All $/mi figures use out-the-door prices (fees + UT tax), optimistic life.
   real but small next to the purchase-price $/mi spread. The 2024
   Model 3 Long Range (4.84, the single-motor Highland) and the 2022
   Model 3 Long Range (4.59) are the efficiency standouts.
+- Gas baseline: our 2011 Toyota Sienna (V6, EPA 20 mpg combined) runs
+  ~$0.20/mi in fuel at St. George's ~$3.90/gal — roughly 5–6× the
+  3–4¢/mi any of these EVs costs on home charging, so switching saves
+  about $2,000–2,400/yr in energy at 12–15k miles.
