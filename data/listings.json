@@ -15,6 +15,10 @@
       "price": 30950,
       "mileage": 36308,
       "status": "AVAILABLE",
+      "battery": {
+        "usable_kwh": 78.0,
+        "epa_range_mi": 333
+      },
       "notes": ""
     },
     {
@@ -31,6 +35,10 @@
       "price": 17250,
       "mileage": 110728,
       "status": "AVAILABLE",
+      "battery": {
+        "usable_kwh": 75.0,
+        "epa_range_mi": 310
+      },
       "notes": ""
     },
     {
@@ -47,6 +55,10 @@
       "price": 31750,
       "mileage": 50714,
       "status": "AVAILABLE",
+      "battery": {
+        "usable_kwh": 75.0,
+        "epa_range_mi": 303
+      },
       "notes": ""
     },
     {
@@ -63,6 +75,11 @@
       "price": 30590,
       "mileage": 36957,
       "status": "AVAILABLE",
+      "battery": {
+        "usable_kwh": 75.0,
+        "epa_range_mi": 363,
+        "note": "VIN motor digit = single motor: Highland LR RWD, EPA 363 mi"
+      },
       "notes": ""
     },
     {
@@ -79,6 +96,10 @@
       "price": 18750,
       "mileage": 111513,
       "status": "AVAILABLE",
+      "battery": {
+        "usable_kwh": 75.0,
+        "epa_range_mi": 322
+      },
       "notes": ""
     },
     {
@@ -95,6 +116,10 @@
       "price": 15850,
       "mileage": 59715,
       "status": "AVAILABLE",
+      "battery": {
+        "usable_kwh": 64.0,
+        "epa_range_mi": 239
+      },
       "notes": "VIN KNDCC3LG = Niro EV. 10yr/100k battery warranty, ~40k warranty miles left. Life assumption revised down to 200k/150k (less high-mileage fleet data than Tesla). OTD $17,793.42 per actual checkout quote 2026-08-11.",
       "life_miles": {
         "optimistic": 200000,
@@ -119,6 +144,10 @@
       "price": 27980,
       "mileage": 65717,
       "status": "AVAILABLE",
+      "battery": {
+        "usable_kwh": 75.0,
+        "epa_range_mi": 326
+      },
       "notes": ""
     },
     {
@@ -135,6 +164,10 @@
       "price": 33000,
       "mileage": 45913,
       "status": "AVAILABLE",
+      "battery": {
+        "usable_kwh": 75.0,
+        "epa_range_mi": 303
+      },
       "notes": ""
     },
     {
@@ -151,6 +184,10 @@
       "price": 23250,
       "mileage": 68659,
       "status": "AVAILABLE",
+      "battery": {
+        "usable_kwh": 75.0,
+        "epa_range_mi": 322
+      },
       "notes": ""
     },
     {
@@ -167,6 +204,10 @@
       "price": 30250,
       "mileage": 58353,
       "status": "AVAILABLE",
+      "battery": {
+        "usable_kwh": 78.0,
+        "epa_range_mi": 315
+      },
       "notes": ""
     },
     {
@@ -183,6 +224,11 @@
       "price": 23500,
       "mileage": 81906,
       "status": "AVAILABLE",
+      "battery": {
+        "usable_kwh": 78.0,
+        "epa_range_mi": 358,
+        "note": "EPA 358 mi with 18\" Aero wheels; 334 mi with 19\""
+      },
       "notes": ""
     },
     {
@@ -199,6 +245,10 @@
       "price": 25690,
       "mileage": 71542,
       "status": "AVAILABLE",
+      "battery": {
+        "usable_kwh": 75.0,
+        "epa_range_mi": 316
+      },
       "notes": ""
     },
     {
@@ -214,6 +264,10 @@
       "price": 41195,
       "mileage": 0,
       "status": "BENCHMARK",
+      "battery": {
+        "usable_kwh": 64.8,
+        "epa_range_mi": 253
+      },
       "notes": "MSRP incl. destination Life assumption revised down to 200k/150k (less high-mileage fleet data than Tesla).",
       "life_miles": {
         "optimistic": 200000,
@@ -237,6 +291,10 @@
       "price": 39990,
       "mileage": 0,
       "status": "BENCHMARK",
+      "battery": {
+        "usable_kwh": 69.5,
+        "epa_range_mi": 321
+      },
       "notes": "MSRP before ~$1,400 destination/order fees",
       "fees_estimate": {
         "doc": 1400.0,
@@ -256,6 +314,10 @@
       "price": 44990,
       "mileage": 0,
       "status": "BENCHMARK",
+      "battery": {
+        "usable_kwh": 75.0,
+        "epa_range_mi": 357
+      },
       "notes": "MSRP before ~$1,400 destination/order fees",
       "fees_estimate": {
         "doc": 1400.0,
@@ -275,6 +337,10 @@
       "price": 48990,
       "mileage": 0,
       "status": "BENCHMARK",
+      "battery": {
+        "usable_kwh": 75.0,
+        "epa_range_mi": 327
+      },
       "notes": "MSRP before ~$1,400 destination/order fees",
       "fees_estimate": {
         "doc": 1400.0,

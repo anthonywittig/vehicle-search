@@ -51,6 +51,13 @@ purchase-price comparison, not total cost of ownership; see
 [`ANALYSIS.md`](ANALYSIS.md) for the caveats (battery warranty position
 is the big one the number doesn't capture).
 
+**Battery / mi/kWh**: each vehicle carries a `battery` object (usable kWh
+when new + EPA range for its config); the table derives **mi/kWh** =
+EPA range ÷ usable kWh as a battery-to-wheels efficiency figure for
+comparing energy cost per mile. Capacities are community estimates —
+Tesla doesn't publish them — and EPA range varies with wheel size; see
+the caveats in [`ANALYSIS.md`](ANALYSIS.md).
+
 Life assumptions by class (each an explicit `life_miles` override in the
 data, so any single vehicle can be adjusted):
 
@@ -80,3 +87,8 @@ All $/mi figures use out-the-door prices (fees + UT tax), optimistic life.
   NACS port with Supercharger access.
 - The federal $7,500 EV tax credit ended 2025-09-30 — no subsidy tilts
   the math toward new.
+- Efficiency spread: both Niros (3.7–3.9 mi/kWh) trail every Tesla here
+  (4.0–4.8), which adds roughly a half-cent to a cent per mile in energy
+  at ~$0.12/kWh — real but small next to the purchase-price $/mi spread.
+  The 2024 Model 3 Long Range (4.84, the single-motor Highland) and the
+  2022 Model 3 Long Range (4.59) are the efficiency standouts.
