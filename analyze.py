@@ -19,6 +19,10 @@ Two models stack here:
    optimistic / 250k conservative; per-vehicle "life_miles" overrides),
    subtract the odometer. $/mi = OTD price / remaining miles.
 
+Each vehicle's "battery" object carries usable capacity (kWh, when new)
+and the EPA range for its config; mi/kWh = EPA range / usable kWh, a
+battery-to-wheels efficiency figure for comparing energy cost per mile.
+
 It ignores financing, insurance, energy, and maintenance — it compares
 purchase prices across mileages, not total cost of ownership.
 """
@@ -69,6 +73,9 @@ def rows(data):
             continue
         conservative_remaining = life["conservative"] - v["mileage"]
         otd, basis = otd_price(v, dealers, tax_rate)
+        battery = v.get("battery", {})
+        usable_kwh = battery.get("usable_kwh")
+        epa_range = battery.get("epa_range_mi")
         out.append(
             {
                 "vehicle": f"{v['year']} {v['make']} {v['model']} {v['trim']}".strip(),
@@ -79,6 +86,11 @@ def rows(data):
                 "mileage": v["mileage"],
                 "life": life,
                 "remaining": remaining,
+                "usable_kwh": usable_kwh,
+                "epa_range": epa_range,
+                "mi_per_kwh": epa_range / usable_kwh
+                if usable_kwh and epa_range
+                else None,
                 "optimistic": otd / remaining,
                 "conservative": otd / conservative_remaining
                 if conservative_remaining > 0
@@ -92,8 +104,8 @@ def rows(data):
 def table(rows):
     lines = [
         "| Vehicle | Condition | List | OTD | Odometer | Life (opt/cons) "
-        "| $/mi optimistic | $/mi conservative |",
-        "|---|---|---|---|---|---|---|---|",
+        "| Usable kWh | EPA range | mi/kWh | $/mi optimistic | $/mi conservative |",
+        "|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     for r in rows:
         conservative = (
@@ -101,9 +113,13 @@ def table(rows):
         )
         life = f"{r['life']['optimistic'] // 1000}k/{r['life']['conservative'] // 1000}k"
         otd = f"${r['otd']:,.0f}" + ("" if r["basis"] == "quoted" else "*")
+        kwh = f"{r['usable_kwh']:g}" if r["usable_kwh"] else "—"
+        epa = f"{r['epa_range']:,} mi" if r["epa_range"] else "—"
+        eff = f"{r['mi_per_kwh']:.2f}" if r["mi_per_kwh"] else "—"
         lines.append(
             f"| {r['vehicle']} | {r['condition']} | ${r['price']:,} | {otd} "
-            f"| {r['mileage']:,} | {life} | ${r['optimistic']:.3f} | {conservative} |"
+            f"| {r['mileage']:,} | {life} | {kwh} | {epa} | {eff} "
+            f"| ${r['optimistic']:.3f} | {conservative} |"
         )
     lines.append("")
     lines.append(
@@ -156,6 +172,21 @@ fleet data of any EV); the Kia Niro EV gets 200k/150k via a `life_miles`
 override (good pack reputation, thin fleet data). See each vehicle's
 `notes`.
 
+**Battery / efficiency**: "Usable kWh" is the pack's usable capacity when
+new; "EPA range" is the official rating for that config; **mi/kWh** =
+EPA range ÷ usable kWh — battery-to-wheels efficiency, i.e. what a kWh
+in the pack buys you in miles. Higher is cheaper to run: our marginal
+summer rate is ~$0.138/kWh (Rocky Mountain Power Schedule 1, Jul 2026
+bill: 12.01¢ Block 2 + ~11% riders + 3.6% tax), so with ~10% charging
+losses 4.5 mi/kWh costs about $0.034/mi in energy vs. $0.041/mi at
+3.7 mi/kWh. Winter block rates are lower. For comparison, our 2011
+Toyota Sienna (V6, EPA 20 mpg combined) at St. George's ~$3.90/gal
+costs about **$0.20/mi in gas** — roughly 5–6× any EV here. We drive
+the van ~21,500 mi/yr (odometer 228,111 → 242,767 between 2025-11-03
+and 2026-07-10, 14,656 mi in 249 days), so that's ~$4,300/yr in gas
+vs. ~$750/yr of home charging — **about $3,500/yr saved** if the EV
+absorbs the van's driving.
+
 This compares purchase prices across mileages; it is not a
 total-cost-of-ownership model (no financing, insurance, energy, or
 maintenance).
@@ -169,6 +200,14 @@ maintenance).
 - The service-life assumption dominates the result. EV batteries mostly
   degrade in range rather than failing outright, so "remaining miles" is
   a planning heuristic, not a prediction.
+- Battery figures are when-new specs. Tesla doesn't publish pack capacity,
+  so usable kWh are community/EV-database estimates (±2–3 kWh depending on
+  cell supplier and build window); a used pack typically holds ~88–95% of
+  it at these odometer readings. EPA range also varies with wheel size (see the
+  2022 Model 3's `battery.note`).
+- mi/kWh here is battery-to-wheels (EPA range ÷ usable kWh). Charging
+  losses of ~10–15% mean cost-from-the-wall is correspondingly worse;
+  EPA's kWh/100mi label figure includes those losses.
 - Warranty position matters as much as $/mi: Tesla's battery/drive-unit
   warranty is 8 yr / 100–120k mi (varies by model); Kia's is 10 yr / 100k mi.
   Cars past the cap carry pack-replacement risk (~$10–15k) that the $/mi

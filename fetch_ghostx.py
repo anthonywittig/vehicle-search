@@ -8,8 +8,8 @@ whose inventory we're tracking), keeps only the makes in MAKES
 (Tesla and Kia), replaces the GhostX-sourced entries in
 data/listings.json with the fresh results, refreshes those dealers' fee
 schedules, and leaves entries from other sources (e.g. new-car MSRP
-benchmarks) untouched. Notes, life_miles overrides, and fees_quoted are
-carried forward for listings that survive the refresh.
+benchmarks) untouched. Notes, life_miles overrides, fees_quoted, and
+battery specs are carried forward for listings that survive the refresh.
 
 Usage:
     python3 fetch_ghostx.py                  # refresh DEALER_IDS inventory
@@ -111,8 +111,8 @@ def main():
     kept = [v for v in data["vehicles"] if v["source"] != "GhostX Automotive"]
     fresh = [entry(v) for v in raw]
 
-    # Carry notes, life overrides, and quoted fees forward for listings
-    # that survive the refresh.
+    # Carry notes, life overrides, quoted fees, and battery specs forward
+    # for listings that survive the refresh.
     old = {
         v["listing_id"]: v
         for v in data["vehicles"]
@@ -121,7 +121,7 @@ def main():
     for v in fresh:
         prev = old.get(v["listing_id"])
         if prev:
-            for key in ("notes", "life_miles", "fees_quoted"):
+            for key in ("notes", "life_miles", "fees_quoted", "battery"):
                 if prev.get(key):
                     v[key] = prev[key]
 
