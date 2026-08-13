@@ -95,5 +95,7 @@ All $/mi figures use out-the-door prices (fees + UT tax), optimistic life.
   Model 3 Long Range (4.59) are the efficiency standouts.
 - Gas baseline: our 2011 Toyota Sienna (V6, EPA 20 mpg combined) runs
   ~$0.20/mi in fuel at St. George's ~$3.90/gal — roughly 5–6× the
-  3–4¢/mi any of these EVs costs on home charging, so switching saves
-  about $2,000–2,400/yr in energy at 12–15k miles.
+  3–4¢/mi any of these EVs costs on home charging. We put ~21,500 mi/yr
+  on the van (odometer log, Nov 2025–Jul 2026), so shifting its driving
+  to an EV saves about $3,500/yr in energy (~$4,300 gas vs. ~$750
+  charging).

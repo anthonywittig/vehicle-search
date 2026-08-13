@@ -35,8 +35,11 @@ bill: 12.01¢ Block 2 + ~11% riders + 3.6% tax), so with ~10% charging
 losses 4.5 mi/kWh costs about $0.034/mi in energy vs. $0.041/mi at
 3.7 mi/kWh. Winter block rates are lower. For comparison, our 2011
 Toyota Sienna (V6, EPA 20 mpg combined) at St. George's ~$3.90/gal
-costs about **$0.20/mi in gas** — roughly 5–6× any EV here, a savings
-of ~$2,000–2,400/yr at 12–15k miles.
+costs about **$0.20/mi in gas** — roughly 5–6× any EV here. We drive
+the van ~21,500 mi/yr (odometer 228,111 → 242,767 between 2025-11-03
+and 2026-07-10, 14,656 mi in 249 days), so that's ~$4,300/yr in gas
+vs. ~$750/yr of home charging — **about $3,500/yr saved** if the EV
+absorbs the van's driving.
 
 This compares purchase prices across mileages; it is not a
 total-cost-of-ownership model (no financing, insurance, energy, or
