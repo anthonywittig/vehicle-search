@@ -29,9 +29,11 @@ override (good pack reputation, thin fleet data). See each vehicle's
 **Battery / efficiency**: "Usable kWh" is the pack's usable capacity when
 new; "EPA range" is the official rating for that config; **mi/kWh** =
 EPA range ÷ usable kWh — battery-to-wheels efficiency, i.e. what a kWh
-in the pack buys you in miles. Higher is cheaper to run: at UT's ~$0.12/kWh
-residential rate, 4.5 mi/kWh costs about $0.027/mi in energy vs. $0.037/mi
-at 3.7 mi/kWh.
+in the pack buys you in miles. Higher is cheaper to run: our marginal
+summer rate is ~$0.138/kWh (Rocky Mountain Power Schedule 1, Jul 2026
+bill: 12.01¢ Block 2 + ~11% riders + 3.6% tax), so with ~10% charging
+losses 4.5 mi/kWh costs about $0.034/mi in energy vs. $0.041/mi at
+3.7 mi/kWh. Winter block rates are lower.
 
 This compares purchase prices across mileages; it is not a
 total-cost-of-ownership model (no financing, insurance, energy, or

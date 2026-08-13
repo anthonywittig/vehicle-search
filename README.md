@@ -88,7 +88,8 @@ All $/mi figures use out-the-door prices (fees + UT tax), optimistic life.
 - The federal $7,500 EV tax credit ended 2025-09-30 — no subsidy tilts
   the math toward new.
 - Efficiency spread: both Niros (3.7–3.9 mi/kWh) trail every Tesla here
-  (4.0–4.8), which adds roughly a half-cent to a cent per mile in energy
-  at ~$0.12/kWh — real but small next to the purchase-price $/mi spread.
-  The 2024 Model 3 Long Range (4.84, the single-motor Highland) and the
-  2022 Model 3 Long Range (4.59) are the efficiency standouts.
+  (4.0–4.8), which adds roughly 0.3–0.9¢ per mile in energy at our
+  ~13.8¢/kWh marginal summer rate (Rocky Mountain Power Schedule 1) —
+  real but small next to the purchase-price $/mi spread. The 2024
+  Model 3 Long Range (4.84, the single-motor Highland) and the 2022
+  Model 3 Long Range (4.59) are the efficiency standouts.
