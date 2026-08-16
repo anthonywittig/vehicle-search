@@ -76,14 +76,17 @@ All $/mi figures use out-the-door prices (fees + UT tax), optimistic life.
   battery warranty cap. (The 2019 M3 LR that briefly led sold within
   hours of our first capture — this inventory moves.)
 - New leader (added 2026-08-16): a **2018 M3 LR at Specialties Auto**
-  (St. George) — $19,900 list / ~$22,259 OTD est., 79,914 mi →
-  **10.1¢/mi optimistic, 13.1¢/mi conservative**. It edges out the
-  GhostX 2018 on both figures with ~31k fewer miles, still under the
-  120k battery warranty mileage cap (though the 8-year clock has likely
-  run out on a 2018), and the listing claims **Full Self-Driving
-  Capability included** — worth verifying it transfers. OTD is
-  estimated: $599 doc (CarEdge's verified-quote report on this dealer)
-  + $233 title/reg default + 7.45% UT tax.
+  (St. George) — $19,900 list / ~$22,259 OTD est., 80,012 mi (per dash
+  screenshot; listing text says 79,914) → **10.1¢/mi optimistic,
+  13.1¢/mi conservative**. It edges out the GhostX 2018 on both figures
+  with ~31k fewer miles, still under the 120k battery warranty mileage
+  cap (though the 8-year clock has likely run out on a 2018). The
+  listing text claims FSD included, but the dash Software screenshot
+  shows only the FSD *computer* (HW3) with basic Autopilot
+  ("Traffic-Aware Cruise Control and Autosteer") as the included
+  package — **FSD software apparently not included**; negotiation
+  material. OTD is estimated: $599 doc (CarEdge's verified-quote report
+  on this dealer) + $233 title/reg default + 7.45% UT tax.
 - The **2022 Kia Niro EV — $17,793 OTD per actual checkout quote —**
   lands mid-pack at ~12.7¢/mi under its shortened 200k/150k life
   assumption, level with used Model Y Long Ranges; its conservative

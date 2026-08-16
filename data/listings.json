@@ -262,13 +262,13 @@
       "model": "Model 3",
       "trim": "Long Range",
       "price": 19900,
-      "mileage": 79914,
+      "mileage": 80012,
       "status": "AVAILABLE",
       "battery": {
         "usable_kwh": 75.0,
         "epa_range_mi": 310
       },
-      "notes": "Captured 2026-08-16. Stock #10367, Deep Blue Metallic. Listing says Full Self-Driving Capability included. No OTD quote: doc fee estimated at $599 per CarEdge's dealer report (Grade A transparency, no add-ons across 4 verified quotes), title/registration at the $233 default.",
+      "notes": "Captured 2026-08-16. Stock #10367, Deep Blue Metallic. Mileage 80,012 per dash screenshot in the listing (listing text says 79,914). Listing text claims Full Self-Driving Capability, but the dash Software screen shows only the FSD *Computer 3* (HW3 hardware) with package = 'Traffic-Aware Cruise Control and Autosteer', i.e. basic Autopilot -- FSD software package apparently NOT included; worth raising when negotiating. Premium Connectivity expires 2026-08-27. No OTD quote: doc fee estimated at $599 per CarEdge's dealer report (Grade A transparency, no add-ons across 4 verified quotes), title/registration at the $233 default.",
       "fees_estimate": {
         "doc": 599.0,
         "label": "doc fee per CarEdge dealer report"
