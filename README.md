@@ -9,8 +9,9 @@ same axis.
 
 **Scope:** the Teslas and the Kia Niro EV at GhostX Automotive dealer 83
 (St. George, UT) — the dealer we're actually shopping at — plus new-car
-MSRP benchmark rows for comparison. Other makes at the dealer are
-ignored.
+MSRP benchmark rows for comparison, and hand-added candidates from other
+local dealers (currently one from Specialties Automotive Group, also
+St. George). Other makes at dealer 83 are ignored.
 
 - [`data/listings.json`](data/listings.json) — the candidate list: dealer
   83's inventory plus the new-car benchmarks, the dealer's fee schedule,
@@ -71,9 +72,21 @@ data, so any single vehicle can be adjusted):
 All $/mi figures use out-the-door prices (fees + UT tax), optimistic life.
 
 - The **used high-mileage Model 3 Long Ranges ($19.3–26k OTD,
-  10.2–12¢/mi)** lead on value, though they're at or past Tesla's 120k
+  10.1–12¢/mi)** lead on value, though they're at or past Tesla's 120k
   battery warranty cap. (The 2019 M3 LR that briefly led sold within
   hours of our first capture — this inventory moves.)
+- New leader (added 2026-08-16): a **2018 M3 LR at Specialties Auto**
+  (St. George) — $19,900 list / ~$22,259 OTD est., 80,012 mi (per dash
+  screenshot; listing text says 79,914) → **10.1¢/mi optimistic,
+  13.1¢/mi conservative**. It edges out the GhostX 2018 on both figures
+  with ~31k fewer miles, still under the 120k battery warranty mileage
+  cap (though the 8-year clock has likely run out on a 2018). The
+  listing text claims FSD included, but the dash Software screenshot
+  shows only the FSD *computer* (HW3) with basic Autopilot
+  ("Traffic-Aware Cruise Control and Autosteer") as the included
+  package — **FSD software apparently not included**; negotiation
+  material. OTD is estimated: $599 doc (CarEdge's verified-quote report
+  on this dealer) + $233 title/reg default + 7.45% UT tax.
 - The **2022 Kia Niro EV — $17,793 OTD per actual checkout quote —**
   lands mid-pack at ~12.7¢/mi under its shortened 200k/150k life
   assumption, level with used Model Y Long Ranges; its conservative

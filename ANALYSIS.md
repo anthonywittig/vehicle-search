@@ -1,6 +1,6 @@
 # Cost per expected remaining mile
 
-Data captured **2026-08-11** · 16 vehicles · sorted best value first
+Data captured **2026-08-11** · 17 vehicles · sorted best value first
 (by the optimistic figure).
 Regenerate with `python3 analyze.py --write` after updating `data/listings.json`.
 
@@ -12,8 +12,11 @@ GhostX API (`dealers.getFeesAndTaxes`); tax is
 7.45% (UT,
 the buyer's state) applied to (price + doc fees). This model reproduced
 the actual Niro checkout quote within $5; the Niro row uses the exact
-quoted numbers. New-car rows estimate Tesla's ~$1,400 destination/order
-fee and a typical $497 dealer doc fee for the Kia.
+quoted numbers. Rows without a GhostX fee schedule use a per-row doc-fee
+estimate plus a $233 title/registration default: ~$1,400
+destination/order for new Teslas, a typical $497 dealer doc fee for the
+new Kia, and $599 for Specialties Auto (per CarEdge's verified-quote
+dealer report).
 
 **$/mi** = OTD price ÷ expected remaining miles, where remaining =
 assumed service life − odometer. Default life is
@@ -49,6 +52,7 @@ maintenance).
 
 | Vehicle | Condition | List | OTD | Odometer | Life (opt/cons) | Usable kWh | EPA range | mi/kWh | $/mi optimistic | $/mi conservative |
 |---|---|---|---|---|---|---|---|---|---|---|
+| 2018 Tesla Model 3 Long Range | used | $19,900 | $22,259* | 80,012 | 300k/250k | 75 | 310 mi | 4.13 | $0.101 | $0.131 |
 | 2018 Tesla Model 3 Long Range | used | $17,250 | $19,302* | 110,728 | 300k/250k | 75 | 310 mi | 4.13 | $0.102 | $0.139 |
 | 2020 Tesla Model 3 Long Range | used | $18,750 | $20,914* | 111,513 | 300k/250k | 75 | 322 mi | 4.29 | $0.111 | $0.151 |
 | 2020 Tesla Model 3 Long Range | used | $23,250 | $25,749* | 68,659 | 300k/250k | 75 | 322 mi | 4.29 | $0.111 | $0.142 |
@@ -92,6 +96,6 @@ maintenance).
 - The federal $7,500 EV tax credit ended 2025-09-30, so no subsidy
   offsets new-car prices.
 
-Current best value: **2018 Tesla Model 3 Long Range** at $19,302 out the door /
-110,728 mi → $0.102 per expected remaining mile
-($0.139 conservative).
+Current best value: **2018 Tesla Model 3 Long Range** at $22,259 out the door /
+80,012 mi → $0.101 per expected remaining mile
+($0.131 conservative).

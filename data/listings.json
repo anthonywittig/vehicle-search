@@ -252,6 +252,29 @@
       "notes": ""
     },
     {
+      "condition": "used",
+      "source": "Specialties Automotive Group (St. George, UT)",
+      "source_url": "https://www.specialtiesauto.com/vehicle-details/2018-tesla-model-3-long-range-sedan-466cce53d898a54b94122e0553f7e591",
+      "listing_id": null,
+      "vin": "5YJ3E1EA2JF035857",
+      "year": 2018,
+      "make": "Tesla",
+      "model": "Model 3",
+      "trim": "Long Range",
+      "price": 19900,
+      "mileage": 80012,
+      "status": "AVAILABLE",
+      "battery": {
+        "usable_kwh": 75.0,
+        "epa_range_mi": 310
+      },
+      "notes": "Captured 2026-08-16. Stock #10367, Deep Blue Metallic. Mileage 80,012 per dash screenshot in the listing (listing text says 79,914). Listing text claims Full Self-Driving Capability, but the dash Software screen shows only the FSD *Computer 3* (HW3 hardware) with package = 'Traffic-Aware Cruise Control and Autosteer', i.e. basic Autopilot -- FSD software package apparently NOT included; worth raising when negotiating. Premium Connectivity expires 2026-08-27. No OTD quote: doc fee estimated at $599 per CarEdge's dealer report (Grade A transparency, no add-ons across 4 verified quotes), title/registration at the $233 default.",
+      "fees_estimate": {
+        "doc": 599.0,
+        "label": "doc fee per CarEdge dealer report"
+      }
+    },
+    {
       "condition": "new",
       "source": "Manufacturer MSRP (2026 model year)",
       "source_url": "",

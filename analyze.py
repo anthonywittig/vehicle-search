@@ -158,8 +158,11 @@ GhostX API (`dealers.getFeesAndTaxes`); tax is
 {config.get('buyer_tax_rate', 0):.2%} ({config.get('buyer_state', '?')},
 the buyer's state) applied to (price + doc fees). This model reproduced
 the actual Niro checkout quote within $5; the Niro row uses the exact
-quoted numbers. New-car rows estimate Tesla's ~$1,400 destination/order
-fee and a typical $497 dealer doc fee for the Kia.
+quoted numbers. Rows without a GhostX fee schedule use a per-row doc-fee
+estimate plus a $233 title/registration default: ~$1,400
+destination/order for new Teslas, a typical $497 dealer doc fee for the
+new Kia, and $599 for Specialties Auto (per CarEdge's verified-quote
+dealer report).
 
 **$/mi** = OTD price ÷ expected remaining miles, where remaining =
 assumed service life − odometer. Default life is
