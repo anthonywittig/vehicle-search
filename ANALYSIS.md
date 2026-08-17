@@ -1,6 +1,6 @@
 # Cost per expected remaining mile
 
-Data captured **2026-08-17** · 17 vehicles · sorted best value first
+Data captured **2026-08-17** · 18 vehicles · sorted best value first
 (by the optimistic figure).
 Regenerate with `python3 analyze.py --write` after updating `data/listings.json`.
 
@@ -54,6 +54,7 @@ maintenance).
 |---|---|---|---|---|---|---|---|---|---|---|
 | 2018 Tesla Model 3 Long Range | used | $19,900 | $22,259* | 80,012 | 300k/250k | 75 | 310 mi | 4.13 | $0.101 | $0.131 |
 | 2018 Tesla Model 3 Long Range | used | $17,250 | $19,302* | 110,728 | 300k/250k | 75 | 310 mi | 4.13 | $0.102 | $0.139 |
+| 2019 Tesla Model 3 Long Range AWD | used | $20,900 | $23,224* | 83,776 | 300k/250k | 75 | 310 mi | 4.13 | $0.107 | $0.140 |
 | 2020 Tesla Model 3 Long Range | used | $18,750 | $20,914* | 111,513 | 300k/250k | 75 | 322 mi | 4.29 | $0.111 | $0.151 |
 | 2020 Tesla Model 3 Long Range | used | $23,250 | $25,749* | 68,659 | 300k/250k | 75 | 322 mi | 4.29 | $0.111 | $0.142 |
 | 2022 Tesla Model 3 Long Range | used | $23,500 | $26,018* | 81,906 | 300k/250k | 78 | 358 mi | 4.59 | $0.119 | $0.155 |

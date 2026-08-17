@@ -253,6 +253,26 @@
     },
     {
       "condition": "used",
+      "source": "GhostX Automotive",
+      "source_url": "https://www.ghostxauto.com/inventory",
+      "listing_id": 1042903,
+      "dealer_id": 83,
+      "vin": "5YJ3E1EB7KF388900",
+      "year": 2019,
+      "make": "Tesla",
+      "model": "Model 3",
+      "trim": "Long Range",
+      "price": 20900,
+      "mileage": 83776,
+      "status": "AVAILABLE",
+      "notes": "VIN digit 8 = B: dual motor AWD (listing page confirms Long Range AWD). Never actually sold -- it fell off our page-1-only fetch (fixed 2026-08-17); relisted here since the first capture. Under both battery-warranty limits: 120k cap (~36k mi left) and 8-yr clock to ~2027.",
+      "battery": {
+        "usable_kwh": 75.0,
+        "epa_range_mi": 310
+      }
+    },
+    {
+      "condition": "used",
       "source": "Specialties Automotive Group (St. George, UT)",
       "source_url": "https://www.specialtiesauto.com/vehicle-details/2018-tesla-model-3-long-range-sedan-466cce53d898a54b94122e0553f7e591",
       "listing_id": null,

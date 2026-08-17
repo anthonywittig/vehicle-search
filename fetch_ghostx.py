@@ -42,14 +42,32 @@ def wanted(v):
 
 
 def fetch_listings(dealer_ids):
-    query = urllib.parse.quote(
-        json.dumps({"json": {"filters": {"dealerIds": dealer_ids}}})
-    )
-    req = urllib.request.Request(
-        f"{BASE}?input={query}", headers={"User-Agent": "vehicle-search/1.0"}
-    )
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return json.load(resp)["result"]["data"]["json"]
+    # listings.list returns 24 rows per page; without the pagination
+    # param only page 1 comes back, silently dropping the oldest
+    # listings (this hid the 2019 M3 LR for a week).
+    rows, seen, page = [], set(), 1
+    while True:
+        query = urllib.parse.quote(
+            json.dumps(
+                {
+                    "json": {
+                        "filters": {"dealerIds": dealer_ids},
+                        "pagination": {"page": page},
+                    }
+                }
+            )
+        )
+        req = urllib.request.Request(
+            f"{BASE}?input={query}", headers={"User-Agent": "vehicle-search/1.0"}
+        )
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            batch = json.load(resp)["result"]["data"]["json"]
+        new = [v for v in batch if v["id"] not in seen]
+        if not new:
+            return rows
+        seen.update(v["id"] for v in new)
+        rows += new
+        page += 1
 
 
 def fetch_dealer_fees(dealer_id):
