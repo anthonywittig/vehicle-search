@@ -17,7 +17,7 @@ St. George). Other makes at dealer 83 are ignored.
   83's inventory plus the new-car benchmarks, the dealer's fee schedule,
   and buyer-state tax config.
 - [`fetch_ghostx.py`](fetch_ghostx.py) — refreshes dealer 83's Tesla and
-  Kia listings and its fee schedule from the GhostX tRPC API
+  Kia Niro listings and its fee schedule from the GhostX tRPC API
   (`ghostxauto.com/api/trpc/listings.list`), keeping entries from other
   sources untouched and reporting listings that left inventory.
 - [`analyze.py`](analyze.py) — computes $/expected-remaining-mile and

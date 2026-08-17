@@ -4,8 +4,8 @@
 GhostX (ghostxauto.com, powered by Keysy) renders client-side and talks to
 a tRPC API at /api/trpc. This script queries `listings.list` for the
 dealers in DEALER_IDS (currently just dealer 83, St. George UT — the one
-whose inventory we're tracking), keeps only the makes in MAKES
-(Tesla and Kia), replaces the GhostX-sourced entries in
+whose inventory we're tracking), keeps only the vehicles we're shopping
+(Teslas and the Kia Niro; see wanted()), replaces the GhostX-sourced entries in
 data/listings.json with the fresh results, refreshes those dealers' fee
 schedules, and leaves entries from other sources (e.g. new-car MSRP
 benchmarks) untouched. Notes, life_miles overrides, fees_quoted, and
@@ -31,8 +31,14 @@ FEES = "https://www.ghostxauto.com/api/trpc/dealers.getFeesAndTaxes"
 # The dealers whose inventory we track. 83 = St. George, UT.
 DEALER_IDS = [83]
 
-# Makes we care about; other makes at the dealer are ignored.
-MAKES = {"Tesla", "Kia"}
+def wanted(v):
+    """The vehicles we're shopping: any Tesla, and the Kia Niro (EV).
+
+    Other makes — and non-Niro Kias like the gas Telluride the dealer
+    stocked 2026-08 — are ignored.
+    """
+    make, model = norm(v["make"]), norm(v["model"])
+    return make == "Tesla" or (make == "Kia" and model.startswith("Niro"))
 
 
 def fetch_listings(dealer_ids):
@@ -105,7 +111,7 @@ def main():
     args = parser.parse_args()
     dealer_ids = args.dealer_id or DEALER_IDS
 
-    raw = [v for v in fetch_listings(dealer_ids) if norm(v["make"]) in MAKES]
+    raw = [v for v in fetch_listings(dealer_ids) if wanted(v)]
 
     data = json.loads(DATA.read_text())
     kept = [v for v in data["vehicles"] if v["source"] != "GhostX Automotive"]
