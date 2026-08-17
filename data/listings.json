@@ -273,6 +273,29 @@
     },
     {
       "condition": "used",
+      "source": "Private party (neighbor)",
+      "source_url": "",
+      "listing_id": null,
+      "vin": "5YJ3E1EB2KF386035",
+      "year": 2019,
+      "make": "Tesla",
+      "model": "Model 3",
+      "trim": "Long Range AWD",
+      "price": 22000,
+      "mileage": 117000,
+      "status": "AVAILABLE",
+      "battery": {
+        "usable_kwh": 75.0,
+        "epa_range_mi": 310
+      },
+      "notes": "Offered 2026-08-17 at $22k. VIN digit 8 = B: dual motor AWD, Fremont-built days apart from the GhostX 2019 (serial 386035 vs 388900). Seller says the $8k FSD package is included 'for life' -- FSD does stay with the car on a private sale, but verify on the dash Software screen that the package line reads 'Full Self-Driving Capability' (cf. the Specialties car, where the claim turned out to be the FSD computer only). Battery warranty effectively gone: ~3k mi left under the 120k cap. Private sale: no doc fee; UT collects sales tax at DMV registration.",
+      "fees_estimate": {
+        "doc": 0.0,
+        "label": "private party, no doc fee"
+      }
+    },
+    {
+      "condition": "used",
       "source": "Specialties Automotive Group (St. George, UT)",
       "source_url": "https://www.specialtiesauto.com/vehicle-details/2018-tesla-model-3-long-range-sedan-466cce53d898a54b94122e0553f7e591",
       "listing_id": null,
