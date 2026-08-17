@@ -1,6 +1,6 @@
 # Cost per expected remaining mile
 
-Data captured **2026-08-11** · 17 vehicles · sorted best value first
+Data captured **2026-08-17** · 17 vehicles · sorted best value first
 (by the optimistic figure).
 Regenerate with `python3 analyze.py --write` after updating `data/listings.json`.
 
@@ -58,9 +58,9 @@ maintenance).
 | 2020 Tesla Model 3 Long Range | used | $23,250 | $25,749* | 68,659 | 300k/250k | 75 | 322 mi | 4.29 | $0.111 | $0.142 |
 | 2022 Tesla Model 3 Long Range | used | $23,500 | $26,018* | 81,906 | 300k/250k | 78 | 358 mi | 4.59 | $0.119 | $0.155 |
 | 2020 Tesla Model Y Long Range | used | $25,690 | $28,371* | 71,542 | 300k/250k | 75 | 316 mi | 4.21 | $0.124 | $0.159 |
+| 2023 Tesla Model 3 Long Range (Dual Motor) | used | $30,260 | $33,281* | 36,308 | 300k/250k | 78 | 333 mi | 4.27 | $0.126 | $0.156 |
 | 2022 Kia Niro EV S, Ex | used | $15,850 | $17,793 | 59,715 | 200k/150k | 64 | 239 mi | 3.73 | $0.127 | $0.197 |
 | 2024 Tesla Model 3 Long Range | used | $30,590 | $33,636* | 36,957 | 300k/250k | 75 | 363 mi | 4.84 | $0.128 | $0.158 |
-| 2023 Tesla Model 3 Long Range (Dual Motor) | used | $30,950 | $34,023* | 36,308 | 300k/250k | 78 | 333 mi | 4.27 | $0.129 | $0.159 |
 | 2021 Tesla Model Y Long Range | used | $27,980 | $30,832* | 65,717 | 300k/250k | 75 | 326 mi | 4.35 | $0.132 | $0.167 |
 | 2023 Tesla Model 3 Performance | used | $30,250 | $33,271* | 58,353 | 300k/250k | 78 | 315 mi | 4.04 | $0.138 | $0.174 |
 | 2022 Tesla Model Y Performance | used | $31,750 | $34,882* | 50,714 | 300k/250k | 75 | 303 mi | 4.04 | $0.140 | $0.175 |

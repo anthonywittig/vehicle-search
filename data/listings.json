@@ -1,5 +1,5 @@
 {
-  "captured_at": "2026-08-11",
+  "captured_at": "2026-08-17",
   "vehicles": [
     {
       "condition": "used",
@@ -12,14 +12,14 @@
       "make": "Tesla",
       "model": "Model 3",
       "trim": "Long Range (Dual Motor)",
-      "price": 30950,
+      "price": 30260,
       "mileage": 36308,
       "status": "AVAILABLE",
+      "notes": "",
       "battery": {
         "usable_kwh": 78.0,
         "epa_range_mi": 333
-      },
-      "notes": ""
+      }
     },
     {
       "condition": "used",
@@ -35,11 +35,11 @@
       "price": 17250,
       "mileage": 110728,
       "status": "AVAILABLE",
+      "notes": "",
       "battery": {
         "usable_kwh": 75.0,
         "epa_range_mi": 310
-      },
-      "notes": ""
+      }
     },
     {
       "condition": "used",
@@ -55,11 +55,11 @@
       "price": 31750,
       "mileage": 50714,
       "status": "AVAILABLE",
+      "notes": "",
       "battery": {
         "usable_kwh": 75.0,
         "epa_range_mi": 303
-      },
-      "notes": ""
+      }
     },
     {
       "condition": "used",
@@ -75,12 +75,12 @@
       "price": 30590,
       "mileage": 36957,
       "status": "AVAILABLE",
+      "notes": "",
       "battery": {
         "usable_kwh": 75.0,
         "epa_range_mi": 363,
         "note": "VIN motor digit = single motor: Highland LR RWD, EPA 363 mi"
-      },
-      "notes": ""
+      }
     },
     {
       "condition": "used",
@@ -96,11 +96,11 @@
       "price": 18750,
       "mileage": 111513,
       "status": "AVAILABLE",
+      "notes": "",
       "battery": {
         "usable_kwh": 75.0,
         "epa_range_mi": 322
-      },
-      "notes": ""
+      }
     },
     {
       "condition": "used",
@@ -116,10 +116,6 @@
       "price": 15850,
       "mileage": 59715,
       "status": "AVAILABLE",
-      "battery": {
-        "usable_kwh": 64.0,
-        "epa_range_mi": 239
-      },
       "notes": "VIN KNDCC3LG = Niro EV. 10yr/100k battery warranty, ~40k warranty miles left. Life assumption revised down to 200k/150k (less high-mileage fleet data than Tesla). OTD $17,793.42 per actual checkout quote 2026-08-11.",
       "life_miles": {
         "optimistic": 200000,
@@ -128,6 +124,10 @@
       "fees_quoted": {
         "doc": 497.0,
         "tax_title_registration": 1446.42
+      },
+      "battery": {
+        "usable_kwh": 64.0,
+        "epa_range_mi": 239
       }
     },
     {
@@ -144,11 +144,11 @@
       "price": 27980,
       "mileage": 65717,
       "status": "AVAILABLE",
+      "notes": "",
       "battery": {
         "usable_kwh": 75.0,
         "epa_range_mi": 326
-      },
-      "notes": ""
+      }
     },
     {
       "condition": "used",
@@ -164,11 +164,11 @@
       "price": 33000,
       "mileage": 45913,
       "status": "AVAILABLE",
+      "notes": "",
       "battery": {
         "usable_kwh": 75.0,
         "epa_range_mi": 303
-      },
-      "notes": ""
+      }
     },
     {
       "condition": "used",
@@ -184,11 +184,11 @@
       "price": 23250,
       "mileage": 68659,
       "status": "AVAILABLE",
+      "notes": "",
       "battery": {
         "usable_kwh": 75.0,
         "epa_range_mi": 322
-      },
-      "notes": ""
+      }
     },
     {
       "condition": "used",
@@ -204,11 +204,11 @@
       "price": 30250,
       "mileage": 58353,
       "status": "AVAILABLE",
+      "notes": "",
       "battery": {
         "usable_kwh": 78.0,
         "epa_range_mi": 315
-      },
-      "notes": ""
+      }
     },
     {
       "condition": "used",
@@ -224,12 +224,12 @@
       "price": 23500,
       "mileage": 81906,
       "status": "AVAILABLE",
+      "notes": "",
       "battery": {
         "usable_kwh": 78.0,
         "epa_range_mi": 358,
         "note": "EPA 358 mi with 18\" Aero wheels; 334 mi with 19\""
-      },
-      "notes": ""
+      }
     },
     {
       "condition": "used",
@@ -245,11 +245,11 @@
       "price": 25690,
       "mileage": 71542,
       "status": "AVAILABLE",
+      "notes": "",
       "battery": {
         "usable_kwh": 75.0,
         "epa_range_mi": 316
-      },
-      "notes": ""
+      }
     },
     {
       "condition": "used",
