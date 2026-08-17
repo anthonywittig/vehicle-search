@@ -67,14 +67,21 @@ data, so any single vehicle can be adjusted):
 | Tesla | 300k/250k | most high-mileage fleet data of any EV |
 | Kia Niro EV | 200k/150k | good pack reputation, thin fleet data |
 
-## Findings so far (2026-08-11)
+## Findings so far (2026-08-17)
 
 All $/mi figures use out-the-door prices (fees + UT tax), optimistic life.
 
 - The **used high-mileage Model 3 Long Ranges ($19.3–26k OTD,
-  10.1–12¢/mi)** lead on value, though they're at or past Tesla's 120k
-  battery warranty cap. (The 2019 M3 LR that briefly led sold within
-  hours of our first capture — this inventory moves.)
+  10.1–12¢/mi)** lead on value, though most are at or past Tesla's 120k
+  battery warranty cap.
+- Correction (2026-08-17): the **2019 M3 LR never sold** — the GhostX
+  API paginates at 24 rows and our fetch only read page 1, so the
+  oldest listing silently fell off when newer arrivals pushed it to
+  page 2 (fetch now paginates). It's back in the table at $20,900 /
+  ~$23,224 OTD, 83,776 mi → **10.7¢/mi**, 3rd place — and it's the
+  **best warranty position of the cheap rows**: dual-motor AWD, ~36k
+  miles left under the 120k cap *and* the 8-year clock runs to ~2027.
+  The 2018s that beat it on $/mi have effectively no warranty left.
 - New leader (added 2026-08-16): a **2018 M3 LR at Specialties Auto**
   (St. George) — $19,900 list / ~$22,259 OTD est., 80,012 mi (per dash
   screenshot; listing text says 79,914) → **10.1¢/mi optimistic,
