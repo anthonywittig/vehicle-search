@@ -82,7 +82,17 @@ All $/mi figures use out-the-door prices (fees + UT tax), optimistic life.
   **best warranty position of the cheap rows**: dual-motor AWD, ~36k
   miles left under the 120k cap *and* the 8-year clock runs to ~2027.
   The 2018s that beat it on $/mi have effectively no warranty left.
-- New leader (added 2026-08-16): a **2018 M3 LR at Specialties Auto**
+- Private-party offer (2026-08-17): a neighbor's **2019 M3 LR AWD at
+  $22k / 117k mi** — a near-twin of the GhostX 2019 (Fremont serials
+  ~3k apart) — lands mid-pack at **13.0¢/mi** (~$23,872 OTD; no doc
+  fee, but UT still collects sales tax on private sales). The GhostX
+  twin strictly dominates it: ~$650 less OTD, 33k fewer miles, and
+  ~36k mi of battery warranty vs. ~3k. Matching the twin's 10.7¢/mi
+  would take an asking price near **$18k**. The claimed lifetime FSD
+  package (would transfer on a private sale; verify the package line on
+  the dash, cf. the Specialties car) is the wildcard — worth maybe
+  $2–4k on a used HW3 car, not the original $8k, since Tesla's newest
+  FSD builds target HW4 and HW3's upgrade path is uncertain.
   (St. George) — $19,900 list / ~$22,259 OTD est., 80,012 mi (per dash
   screenshot; listing text says 79,914) → **10.1¢/mi optimistic,
   13.1¢/mi conservative**. It edges out the GhostX 2018 on both figures
